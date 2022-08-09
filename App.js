@@ -7,8 +7,8 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     'NotoSansTC-Regular': require('./assets/fonts/NotoSansTC-Regular.otf'),
     'NotoSansTC-Bold': require('./assets/fonts/NotoSansTC-Bold.otf'),
-    'Inter-SemiBoldItalic':
-      'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
+    // 'Inter-SemiBoldItalic':
+    //   'https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12',
   });
   if (!fontsLoaded) {
     return null;
