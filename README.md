@@ -1,4 +1,4 @@
-lesson-1:初始化项目
+lesson-2:自定义字体
 
 
-expo cli :url(https://docs.expo.dev/workflow/expo-cli/#expo-init)
+expo-font :url(https://docs.expo.dev/versions/latest/sdk/font/)
