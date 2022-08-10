@@ -1,13 +1,8 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/home';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import BookDetails from './screens/bookDetails';
-import About from './screens/about';
-
-const Stack = createNativeStackNavigator();
+import StackScreen from './routes/stack';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,28 +16,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName='主页'
-        screenOptions={{
-          headerStyle: { backgroundColor: '#eee' },
-          headerTintColor: '#444',
-        }}
-      >
-        <Stack.Screen
-          name='主页'
-          component={Home}
-          options={{
-            title: '好书推荐',
-          }}
-        />
-        <Stack.Screen
-          name='好书详情'
-          component={BookDetails}
-          options={{
-            title: '书单详情',
-          }}
-        />
-      </Stack.Navigator>
+      <StackScreen />
     </NavigationContainer>
   );
 }
