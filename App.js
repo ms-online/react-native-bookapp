@@ -21,9 +21,27 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='主页'>
-        <Stack.Screen name='主页' component={Home} />
-        <Stack.Screen name='好书详情' component={BookDetails} />
+      <Stack.Navigator
+        initialRouteName='主页'
+        screenOptions={{
+          headerStyle: { backgroundColor: '#eee' },
+          headerTintColor: '#444',
+        }}
+      >
+        <Stack.Screen
+          name='主页'
+          component={Home}
+          options={{
+            title: '好书推荐',
+          }}
+        />
+        <Stack.Screen
+          name='好书详情'
+          component={BookDetails}
+          options={{
+            title: '书单详情',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
