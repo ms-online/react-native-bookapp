@@ -1,4 +1,4 @@
-lesson-10自定义bookItem组件
+lesson-11:动态加载本地图片
 
 
 

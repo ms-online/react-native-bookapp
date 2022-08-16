@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-
+import imageArr from '../imageLoad';
 export default function BookItem({ item }) {
   return (
     <View style={styles.container}>
       {/* 书的封面 */}
-      <Image source={require(item.image_url)} />
+      <Image source={imageArr['img' + item.image_url]} style={styles.image} />
       <View style={styles.infoContainer}>
         <Text style={styles.title}>书名:{item.title}</Text>
         <View style={styles.info}>
@@ -30,6 +30,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  image: {
+    width: 65,
+    height: 65,
+    borderRadius: 400,
+    marginHorizontal: 10,
+    resizeMode: 'contain',
   },
   infoContainer: {
     flex: 1,
